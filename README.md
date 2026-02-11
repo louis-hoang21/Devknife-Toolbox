@@ -2,8 +2,7 @@
 
 Supercharge your development workflow with powerful offline tools designed to maximize productivity and efficiency.
 
-🚀 v0.1.0 — Initial Release
-## ✨ New Features
+## ✨ Features
 - Base64 encode/decode
 - JWT creation + verification (HS256/384/512)
 - JSON format/validate + JSON compare
@@ -25,7 +24,7 @@ Supercharge your development workflow with powerful offline tools designed to ma
 - Curl to code (PHP/Go/JS/Java)
 - Dark mode & Light mode support
 
-## Development Setup
+## 🚀 Development Setup
 1. Install dependencies:
    ```bash
    npm install
@@ -57,7 +56,7 @@ Supercharge your development workflow with powerful offline tools designed to ma
    ```
 
 
-## Install Application
+## 📌 Install Application
 
 Download the latest release from:
 - [GitHub Releases](https://github.com/louis-hoang21/Devknife-Toolbox/releases)
