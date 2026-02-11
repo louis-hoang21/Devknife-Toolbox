@@ -34,7 +34,7 @@ Supercharge your development workflow with powerful offline tools designed to ma
    ```bash
    npm run tauri dev
    ```
-3. Build MacOs:
+3. Build:
 
    Apple Silicon
    ```bash
@@ -45,6 +45,17 @@ Supercharge your development workflow with powerful offline tools designed to ma
    ```bash
    npm run tauri build -- --target x86_64-apple-darwin
    ```
+
+   Windows:
+   ```bash
+   npm run tauri build -- --target x86_64-pc-windows-msvc
+   ```
+
+   Linux (x86_64):
+   ```bash
+   npm run tauri build -- --target x86_64-unknown-linux-gnu
+   ```
+
 
 ## Install Application
 
