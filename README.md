@@ -49,4 +49,4 @@ Supercharge your development workflow with powerful offline tools designed to ma
 ## Install Application
 
 Download the latest release from:
-- [GitHub Releases](LINK_HERE)
+- [GitHub Releases](https://github.com/louis-hoang21/Devknife-Toolbox/releases)
