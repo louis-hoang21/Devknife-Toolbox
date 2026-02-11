@@ -1,0 +1,22 @@
+# System
+*.DS_Store
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Node
+node_modules/
+dist/
+.env
+.env.*
+
+# Rust
+src-tauri/target/
+
+# Logs
+*.log
+
+# Docker
+docker-compose.yml
