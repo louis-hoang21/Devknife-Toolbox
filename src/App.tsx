@@ -32,7 +32,7 @@ export default function App() {
       try {
         unlisten.push(
           await listen("menu:about", () => {
-            window.alert("Devknife Toolbox\nNative developer utility suite built with Tauri v2.");
+            window.alert("Devknife Toolbox");
           })
         );
         unlisten.push(
@@ -40,18 +40,13 @@ export default function App() {
             window.location.reload();
           })
         );
-        // unlisten.push(
-        //   await listen("menu:docs", () => {
-        //     window.open("https://tool.devknife.dev", "_blank");
-        //   })
-        // );
         unlisten.push(
           await listen("menu:report-issue", () => {
             window.open("https://github.com/louis-hoang21", "_blank");
           })
         );
-      } catch {
-        // Ignore if not running inside Tauri.
+      } catch (error) {
+        console.error("Error: ", error);
       }
     };
 
