@@ -122,11 +122,11 @@ export default function JwtTool() {
         <div className="grid two">
           <div>
             <label>Decoded Header</label>
-            <div className="output">{decoded?.header ?? "-"}</div>
+            <textarea rows={20} className="output" value={decoded?.header ?? "-"}/>
           </div>
           <div>
             <label>Decoded Payload</label>
-            <div className="output">{decoded?.payload ?? "-"}</div>
+            <textarea rows={20} className="output" value={decoded?.payload ?? "-"}/>
           </div>
         </div>
       </div>
