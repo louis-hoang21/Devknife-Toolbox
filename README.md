@@ -60,3 +60,6 @@ Supercharge your development workflow with powerful offline tools designed to ma
 
 Download the latest release from:
 - [GitHub Releases](https://github.com/louis-hoang21/Devknife-Toolbox/releases)
+
+## Buy me a coffee
+![IMG_0590](https://github.com/user-attachments/assets/714c3a6e-7bd2-49ce-a474-406b3e40d2f2)
