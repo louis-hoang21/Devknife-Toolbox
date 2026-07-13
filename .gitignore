@@ -20,3 +20,6 @@ src-tauri/target/
 
 # Docker
 docker-compose.yml
+
+# AI
+.claude
