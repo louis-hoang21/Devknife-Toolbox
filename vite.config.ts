@@ -12,15 +12,18 @@ export default defineConfig(() => ({
     target: "es2020",
     sourcemap: false,
     minify: true,
+    chunkSizeWarningLimit: 700,
     rollupOptions: {
       output: {
-        manualChunks: {
-          "vendor-react": ["react", "react-dom"],
-          "tool-pgp": ["openpgp"],
-          "tool-x509": ["node-forge"],
-          "tool-qr": ["qrcode"],
-          "tool-curl": ["curlconverter"],
-          "tool-markdown": ["marked"]
+        manualChunks(id: string) {
+          if (!id.includes("node_modules")) return;
+          if (id.includes("/openpgp/")) return "vendor-openpgp";
+          if (id.includes("/node-forge/")) return "vendor-forge";
+          if (id.includes("/curlconverter/")) return "vendor-curl";
+          if (id.includes("/qrcode/")) return "vendor-qr";
+          if (id.includes("/marked/")) return "vendor-marked";
+          if (id.includes("/react-dom/") || id.includes("/react/") || id.includes("/scheduler/")) return "vendor-react";
+          return "vendor";
         }
       }
     }
