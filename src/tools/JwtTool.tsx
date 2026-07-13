@@ -80,6 +80,29 @@ export default function JwtTool() {
   return (
     <div className="grid">
       <div className="card">
+        <label>JWT Token</label>
+        <textarea value={token} onChange={(event) => setToken(event.target.value)} />
+        {error ? <p className="muted">{error}</p> : null}
+        <div style={{ display: "flex", gap: 8, marginTop: 8, alignItems: "center" }}>
+          <CopyButton value={token} />
+          <span className="badge">{verifyStatus === "valid" ? "Valid" : verifyStatus === "invalid" ? "Invalid" : "Unknown"}</span>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="grid two">
+          <div>
+            <label>Decoded Header</label>
+            <textarea rows={20} className="output" value={decoded?.header ?? "-"}/>
+          </div>
+          <div>
+            <label>Decoded Payload</label>
+            <textarea rows={20} className="output" value={decoded?.payload ?? "-"}/>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
         <div className="grid two">
           <div>
             <label>Header (JSON)</label>
@@ -108,28 +131,7 @@ export default function JwtTool() {
         </div>
       </div>
 
-      <div className="card">
-        <label>JWT Token</label>
-        <textarea value={token} onChange={(event) => setToken(event.target.value)} />
-        {error ? <p className="muted">{error}</p> : null}
-        <div style={{ display: "flex", gap: 8, marginTop: 8, alignItems: "center" }}>
-          <CopyButton value={token} />
-          <span className="badge">{verifyStatus === "valid" ? "Valid" : verifyStatus === "invalid" ? "Invalid" : "Unknown"}</span>
-        </div>
-      </div>
-
-      <div className="card">
-        <div className="grid two">
-          <div>
-            <label>Decoded Header</label>
-            <textarea rows={20} className="output" value={decoded?.header ?? "-"}/>
-          </div>
-          <div>
-            <label>Decoded Payload</label>
-            <textarea rows={20} className="output" value={decoded?.payload ?? "-"}/>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 }

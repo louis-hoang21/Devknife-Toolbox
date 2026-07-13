@@ -20,22 +20,10 @@ const tools = [
     component: lazy(() => import("./JsonTool"))
   },
   {
-    id: "regex",
-    name: "Kiểm tra Regex",
-    description: "Test regex patterns and inspect matches and groups.",
-    component: lazy(() => import("./RegexTool"))
-  },
-  {
-    id: "url",
-    name: "Phân tích URL",
-    description: "Parse URL parts, query params, and credentials.",
-    component: lazy(() => import("./UrlTool"))
-  },
-  {
-    id: "uri-component",
-    name: "Mã hóa/Giải mã URI Component",
-    description: "Encode/decode URI components safely.",
-    component: lazy(() => import("./UriComponentTool"))
+    id: "timestamp",
+    name: "Timestamp",
+    description: "Convert timestamps to dates and back.",
+    component: lazy(() => import("./TimestampTool"))
   },
   {
     id: "uuid",
@@ -56,34 +44,10 @@ const tools = [
     component: lazy(() => import("./CronTool"))
   },
   {
-    id: "json-compare",
-    name: "So sánh JSON",
-    description: "Compare JSON documents and highlight differences.",
-    component: lazy(() => import("./JsonCompareTool"))
-  },
-  {
-    id: "rsa",
-    name: "Tạo Khóa RSA",
-    description: "Generate RSA key pairs and export as PEM.",
-    component: lazy(() => import("./RsaTool"))
-  },
-  {
-    id: "aes",
-    name: "Công cụ Mã hóa/Giải mã AES",
-    description: "Encrypt/decrypt with AES-GCM and random IVs.",
-    component: lazy(() => import("./AesTool"))
-  },
-  {
-    id: "qr",
-    name: "Tạo Mã QR",
-    description: "Generate QR codes with configurable size and error correction.",
-    component: lazy(() => import("./QrTool"))
-  },
-  {
-    id: "html-preview",
-    name: "Xem trước HTML",
-    description: "Live preview custom HTML snippets.",
-    component: lazy(() => import("./HtmlPreviewTool"))
+    id: "regex",
+    name: "Kiểm tra Regex",
+    description: "Test regex patterns and inspect matches and groups.",
+    component: lazy(() => import("./RegexTool"))
   },
   {
     id: "sha",
@@ -104,22 +68,58 @@ const tools = [
     component: lazy(() => import("./HmacTool"))
   },
   {
+    id: "rsa",
+    name: "Tạo Khóa RSA",
+    description: "Generate RSA key pairs and export as PEM.",
+    component: lazy(() => import("./RsaTool"))
+  },
+  {
+    id: "aes",
+    name: "Công cụ Mã hóa/Giải mã AES",
+    description: "Encrypt/decrypt with AES-GCM and random IVs.",
+    component: lazy(() => import("./AesTool"))
+  },
+  {
+    id: "json-compare",
+    name: "So sánh JSON",
+    description: "Compare JSON documents and highlight differences.",
+    component: lazy(() => import("./JsonCompareTool"))
+  },
+  {
+    id: "qr",
+    name: "Tạo Mã QR",
+    description: "Generate QR codes with configurable size and error correction.",
+    component: lazy(() => import("./QrTool"))
+  },
+  {
+    id: "html-preview",
+    name: "Xem trước HTML",
+    description: "Live preview custom HTML snippets.",
+    component: lazy(() => import("./HtmlPreviewTool"))
+  },
+  {
+    id: "url",
+    name: "Phân tích URL",
+    description: "Parse URL parts, query params, and credentials.",
+    component: lazy(() => import("./UrlTool"))
+  },
+  {
+    id: "uri-component",
+    name: "Mã hóa/Giải mã URI Component",
+    description: "Encode/decode URI components safely.",
+    component: lazy(() => import("./UriComponentTool"))
+  },
+  {
+    id: "curl",
+    name: "Curl to Code (PHP, Go, JS, Java)",
+    description: "Convert curl commands into SDK-ready code.",
+    component: lazy(() => import("./CurlToCodeTool"))
+  },
+  {
     id: "pgp",
     name: "PGP",
     description: "Encrypt/decrypt messages and manage PGP keys.",
     component: lazy(() => import("./PgpTool"))
-  },
-  {
-    id: "timestamp",
-    name: "Timestamp",
-    description: "Convert timestamps to dates and back.",
-    component: lazy(() => import("./TimestampTool"))
-  },
-  {
-    id: "port-check",
-    name: "Kiểm tra cổng",
-    description: "Check if a host port is reachable using native TCP.",
-    component: lazy(() => import("./PortCheckTool"))
   },
   {
     id: "text-diff",
@@ -146,11 +146,11 @@ const tools = [
     component: lazy(() => import("./SnippetTool"))
   },
   {
-    id: "curl",
-    name: "Curl to Code (PHP, Go, JS, Java)",
-    description: "Convert curl commands into SDK-ready code.",
-    component: lazy(() => import("./CurlToCodeTool"))
-  }
+    id: "port-check",
+    name: "Kiểm tra cổng",
+    description: "Check if a host port is reachable using native TCP.",
+    component: lazy(() => import("./PortCheckTool"))
+  },
 ];
 
 export default tools;

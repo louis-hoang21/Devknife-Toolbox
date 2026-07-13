@@ -8,8 +8,7 @@ export default function Base64Tool() {
 
   const [encoded, encodeError] = useMemo(() => {
     try {
-      const value = encodeBase64(rawInput);
-      return [value, ""] as const;
+      return [encodeBase64(rawInput), ""] as const;
     } catch (error) {
       return ["", (error as Error).message] as const;
     }
@@ -17,34 +16,46 @@ export default function Base64Tool() {
 
   const [decoded, decodeError] = useMemo(() => {
     try {
-      const value = decodeBase64(base64Input);
-      return [value, ""] as const;
+      return [decodeBase64(base64Input), ""] as const;
     } catch (error) {
       return ["", (error as Error).message] as const;
     }
   }, [base64Input]);
 
   return (
-    <div className="card">
-      <div className="grid two">
-        <div>
-          <label>Raw Input</label>
-          <textarea value={rawInput} onChange={(event) => setRawInput(event.target.value)} />
-          <label style={{ marginTop: 12 }}>Encoded Output</label>
-          <textarea value={encoded} readOnly />
-          {encodeError ? <p className="muted">{encodeError}</p> : null}
-          <div style={{ marginTop: 8 }}>
-            <CopyButton value={encoded} />
+    <div className="grid">
+      <div className="card">
+        <h4>GIẢI MÃ (DECODE)</h4>
+        <div className="grid two">
+          <div>
+            <label>Base64 Input</label>
+            <textarea rows={20} value={base64Input} onChange={(event) => setBase64Input(event.target.value)} />
+          </div>
+          <div>
+            <label>Decoded Output</label>
+            <textarea rows={20} value={decoded} readOnly />
+            {decodeError ? <p className="muted">{decodeError}</p> : null}
+            <div style={{ marginTop: 8 }}>
+              <CopyButton value={decoded} />
+            </div>
           </div>
         </div>
-        <div>
-          <label>Base64 Input</label>
-          <textarea value={base64Input} onChange={(event) => setBase64Input(event.target.value)} />
-          <label style={{ marginTop: 12 }}>Decoded Output</label>
-          <textarea value={decoded} readOnly />
-          {decodeError ? <p className="muted">{decodeError}</p> : null}
-          <div style={{ marginTop: 8 }}>
-            <CopyButton value={decoded} />
+      </div>
+
+      <div className="card">
+        <h4>MÃ HÓA (ENCODE)</h4>
+        <div className="grid two">
+          <div>
+            <label>Raw Input</label>
+            <textarea rows={20} value={rawInput} onChange={(event) => setRawInput(event.target.value)} />
+          </div>
+          <div>
+            <label>Encoded Output</label>
+            <textarea rows={20} value={encoded} readOnly />
+            {encodeError ? <p className="muted">{encodeError}</p> : null}
+            <div style={{ marginTop: 8 }}>
+              <CopyButton value={encoded} />
+            </div>
           </div>
         </div>
       </div>

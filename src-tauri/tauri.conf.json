@@ -1,12 +1,12 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "productName": "Devknife Toolbox",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "identifier": "hunghd.work",
   "build": {
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build",
-    "devUrl": "http://127.0.0.1:5173",
+    "devUrl": "http://127.0.0.1:1420",
     "frontendDist": "../dist"
   },
   "app": {
@@ -19,6 +19,7 @@
         "minWidth": 980,
         "minHeight": 680,
         "resizable": true,
+        "center": true,
         "devtools": true
       }
     ],

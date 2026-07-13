@@ -83,7 +83,7 @@ export default function App() {
     <div className="app">
       <aside className="sidebar">
         <div className="brand">
-          <p>Devknife <span>Toolbox</span></p> <p className="muted-verion"><i>v0.1.0</i></p>
+          <p>Devknife <span>Toolbox</span></p> <p className="muted-verion"><i>v1.0.0</i></p>
         </div>
         {isHome ? (
           <p className="muted header-subtitle">Bộ công cụ hữu ích cho lập trình viên, hỗ trợ làm việc offline</p>
@@ -95,6 +95,7 @@ export default function App() {
           placeholder="Tìm kiếm..."
           value={query}
           onChange={(event) => setQuery(event.target.value)}
+          autoComplete="off"
         />
         <div className="tool-list">
           {navItems.map((item) => (
